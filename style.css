@@ -24,7 +24,6 @@ a:hover {
     bottom: 0;
     width: 100%;
     z-index: 100000;
-    background: #FFFFFF url("img/pageload-spinner.gif") no-repeat center center;
 }
 
 .bloc {
@@ -38,11 +37,12 @@ a:hover {
     background-size: cover;
     position: relative;
 }
-
+/*
 .bloc .container {
     padding-left: 0;
     padding-right: 0;
 }
+*/
 
 .bloc-lg {
     padding: 100px 50px;
@@ -133,7 +133,7 @@ a:hover {
 .d-bloc h5 a,
 .d-bloc h6 a,
 .d-bloc p a {
-    color: rgba(255, 255, 255, .6);
+    color: rgba(0,0,0,1);
 }
 
 .d-bloc .a-btn:hover,
@@ -293,10 +293,10 @@ a:hover {
 }
 
 .navbar-brand {
-    height: 40px;
+    height: auto;
     padding: 3px 15px;
     font-size: 25px;
-    font-weight: normal;
+    font-weight: 400;
     font-weight: 600;
     line-height: 44px;
 }
@@ -308,7 +308,7 @@ a:hover {
 }
 
 .navbar-brand img[src$=svg] {
-    min-width: 200px;
+    min-width: 100px;
 }
 
 .nav-center .navbar-brand img {
@@ -362,7 +362,7 @@ a:hover {
     z-index: 2;
 }
 
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
     .site-navigation {
         position: absolute;
         top: 50%;
@@ -657,11 +657,11 @@ a {
 .container {
     max-width: 1000px;
 }
-
+/*
 .image-resize-mode{
     width: 100px;
 }
-
+*/
 .hero-bloc-text {
     font-size: 38px;
 }
@@ -681,7 +681,7 @@ a {
 }
 
 p {
-    font-size: 11px;
+    font-size: 12px;
 }
 
 .tight-width-whitespace {
@@ -711,8 +711,13 @@ p {
 h2 {
     font-size: 22px;
     line-height: 1.4em;
+    font-weight: 700;
 }
-
+/*
+.h2-cta{
+    margin: 0 30px;
+}
+*/
 h3 {
     font-size: 15px;
     text-transform: uppercase;
@@ -732,6 +737,10 @@ h1 {
 
 h4 {
     color: #333333!important;
+}
+
+footer{
+    height: 120px;
 }
 
 .icons {
@@ -757,7 +766,7 @@ h4 {
 }
 
 .black-background {
-    background-color: rgba(165, 147, 99, 0.7);
+    background-color: rgba(0,0,0, 0.7);
     padding: 40px 40px 40px 40px;
 }
 
@@ -786,10 +795,10 @@ h4 {
     background: #F3976C;
     color: #FFFFFF!important;
 }
-
+/*ci dessous - changement de contraste de police*/
 .btn-atomic-tangerine:hover {
     background: #c27956!important;
-    color: #FFFFFF!important;
+    color: #000000!important;
 }
 
 .ltc-white {
@@ -828,6 +837,55 @@ h4 {
 .bg-presentation {
     background-image: url("img/image-de-presentation.jpg");
 }
+
+/*ci dessous-modifs des nouveaux textes ajoutés dans l'index.html*/
+.services {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .services-description {
+    font-size: 16px;
+    width: 50%;
+    margin: 10px 0;
+  }
+  .citation {
+    font-size: 14px;
+    font-style: italic;
+  }
+  .auteur {
+    font-size: 14px;
+  }
+  .bloc-citation {
+    margin-top: 60px;
+  }
+  .portfolio-description {
+    font-size: 16px;
+    margin: 10px 0;
+  }
+  .portfolio-bloc {
+    padding-top: 40px;
+  }
+  .text-footer {
+    color: #000000 !important;
+    font-size: 15px;
+  }
+  /*ci dessous-modifs des nouveaux textes ajoutés dans contact.html*/
+  .mb-40 {
+    margin-bottom: 40px;
+  }
+
+  .p-localisation {
+    font-size: 14px;
+    width: 50%;
+  }
+  .h3-localisation {
+    width: 50%;
+  }
+
+
+  
 
 @media screen and (max-width: 1024px) {
     .bloc {
@@ -877,6 +935,15 @@ h4 {
         position: relative;
     }
 
+
+/*Mise en place de padding avec variable*/
+    .bloc {
+        padding-left: var(--safe-area-inset-left);
+        padding-right: var(--safe-area-inset-right);
+      }
+
+
+
     .bloc-group,
     .bloc-group .bloc {
         display: block;
@@ -885,6 +952,8 @@ h4 {
     .bloc-fill-screen .fill-bloc-top-edge,
     .bloc-fill-screen .fill-bloc-bottom-edge {
         padding: 0 20px;
+        padding-left: var(--safe-area-inset-left);
+        padding-right: var(--safe-area-inset-right);
     }
 }
 
@@ -1032,6 +1101,16 @@ h4 {
         padding-left: 0;
         padding-right: 0;
     }
+
+    /*changement de la taille du logo*/
+    .navbar-brand img {
+        min-width: 30px;
+        height: 30px;
+      }
+      .logo-responsive-mobile {
+        width: 100px;
+        height: 100px;
+      }
 }
 
 @media screen and (max-width: 767px) {
