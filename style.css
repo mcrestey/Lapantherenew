@@ -37,12 +37,7 @@ a:hover {
     background-size: cover;
     position: relative;
 }
-/*
-.bloc .container {
-    padding-left: 0;
-    padding-right: 0;
-}
-*/
+
 
 .bloc-lg {
     padding: 100px 50px;
@@ -657,11 +652,11 @@ a {
 .container {
     max-width: 1000px;
 }
-/*
+
 .image-resize-mode{
     width: 100px;
 }
-*/
+
 .hero-bloc-text {
     font-size: 38px;
 }
@@ -713,11 +708,7 @@ h2 {
     line-height: 1.4em;
     font-weight: 700;
 }
-/*
-.h2-cta{
-    margin: 0 30px;
-}
-*/
+
 h3 {
     font-size: 15px;
     text-transform: uppercase;
